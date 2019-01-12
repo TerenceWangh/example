@@ -1,0 +1,9 @@
+apply plugin: 'java'
+
+jar {
+  baseName = 'example'
+  version =  '1.0.0'
+  manifest {
+    attributes 'Main-Class': 'com.culaer.example.Hello'
+  }
+}
