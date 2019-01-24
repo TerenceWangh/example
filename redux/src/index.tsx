@@ -5,6 +5,7 @@ import { Provider } from "react-redux";
 
 import reducers from "./reducers";
 import App from './components/App';
+import './index.css'
 
 const initialState = {};
 const store: Store<any> = createStore(reducers, initialState);

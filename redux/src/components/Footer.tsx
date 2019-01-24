@@ -1,7 +1,6 @@
 import React from 'react';
 import Link from './Link';
 import { SHOW_ALL, SHOW_COMPLETED, SHOW_ACTIVE } from '../model/TodoFilters';
-import { setVisibilityFilter } from '../actions';
 
 const FILTER_TITLES = {
   [SHOW_ALL]: 'All',
@@ -19,7 +18,7 @@ interface FooterProps {
 
 class Footer extends React.Component<FooterProps> {
   render() {
-    const { activeCount, completedCount, onClearCompleted } = this.props;
+    const { activeCount, completedCount, onClearCompleted, onShow } = this.props;
     const itemWord = activeCount === 1 ? 'item' : 'items';
 
     return (
@@ -32,7 +31,7 @@ class Footer extends React.Component<FooterProps> {
             <li key={filter}>
               <Link
                 active={filter === this.props.filter}
-                setFilter={setVisibilityFilter}
+                onClick={onShow.bind(this, filter)}
                 children={FILTER_TITLES[filter]}
               />
             </li>

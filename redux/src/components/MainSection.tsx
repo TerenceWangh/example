@@ -45,7 +45,7 @@ class MainSection extends React.Component<MainSectionProps, MainSectionState> {
     const { todos, completeTodo, deleteTodo, editTodo } = this.props;
 
     const filteredTodos = todos.filter(TODO_FILTERS[filter])
-    const actions = null;
+    const actions = {completeTodo, deleteTodo, editTodo};
 
     const todosCount = todos.length;
     const completedCount = todos.reduce((count: number, todo): number =>

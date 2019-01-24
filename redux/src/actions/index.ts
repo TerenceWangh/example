@@ -32,17 +32,11 @@ const clearCompleted = createAction<void>(
   () => { }
 );
 
-const setVisibilityFilter = createAction<void>(
-  types.SET_VISIBILITY_FILTER,
-  () => {}
-)
-
 export {
   addTodo,
   deleteTodo,
   editTodo,
   completeTodo,
   completeAll,
-  clearCompleted,
-  setVisibilityFilter
-}
+  clearCompleted
+};

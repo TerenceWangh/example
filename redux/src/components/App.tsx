@@ -32,7 +32,8 @@ class App extends React.Component<AppProps> {
 }
 
 const mapStateToProps = (state: any) => ({
-  todos: state.todos
+  todos: state.todos,
+
 });
 
 export default connect(mapStateToProps)(App);
